@@ -1,7 +1,7 @@
 # Predicting Fasciolosis in Uruguayan 🇺🇾 Bovine Carcasses: An End-to-End Machine Learning Study 
 
 ## Description
-This repository implements a supervised machine learning pipeline to predict fasciolosis (liver fluke infection) in bovine carcasses processed at a major Uruguayan abattoir in 2016. Using routinely collected post-slaughter data, the model leverages Light Gradient Boosting Machine (LightGBM) with Bayesian hyperparameter optimization, feature engineering, and rigorous evaluation. The approach prioritizes sensitivity (recall) for disease detection, using the three most informative features: carcass weight, dental age, and fat score. All pipeline components—including data preprocessing, imputation, feature ranking, model tuning, and performance assessment—are designed for full reproducibility and operational relevance in abattoir surveillance workflows.
+This repository implements a supervised machine learning pipeline to predict fasciolosis (liver fluke infection) in bovine carcasses processed at a major Uruguayan abattoir in 2016. Using routinely collected post-slaughter data, the model leverages Light Gradient Boosting Machine (LightGBM) with Bayesian hyperparameter optimization, feature engineering, and rigorous evaluation. The approach prioritizes sensitivity (recall) for disease detection, using the three most informative features: carcass weight, dental age, and fat score. All pipeline components (data preprocessing, imputation, feature ranking, model tuning, and performance assessment) are designed for full reproducibility and operational relevance in abattoir surveillance workflows.
 
 ## Overview
 - **Target**: Binary indicator of fasciolosis presence/absence in bovine carcasses.
