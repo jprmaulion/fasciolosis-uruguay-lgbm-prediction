@@ -28,7 +28,7 @@ _Figure_: Receiver Operating Characteristic (ROC) curve of the tuned LightGBM cl
 ## Data
 - _Source:_ Publicly available abattoir dataset [[1](https://data.mendeley.com/datasets/3jnn876my4/3)].
 - _Target variable:_ Fasciolosis presence (`fasciola` binary indicator).
-- _Features:  _
+- _Features:_
   | Feature                | Type      | Description                                   |
   |------------------------|-----------|-----------------------------------------------|
   | `carcass_weight`       | Continuous| Post-slaughter carcass weight                  |
