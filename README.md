@@ -1,4 +1,4 @@
-# Predicting Fasciolosis in Uruguayan Bovine Carcasses: An End-to-End Machine Learning Study
+# Predicting Fasciolosis in Uruguayan 🇺🇾 Bovine Carcasses: An End-to-End Machine Learning Study 
 
 ## Description
 This repository implements a supervised machine learning pipeline to predict fasciolosis (liver fluke infection) in bovine carcasses processed at a major Uruguayan abattoir in 2016. Using routinely collected post-slaughter data, the model leverages Light Gradient Boosting Machine (LightGBM) with Bayesian hyperparameter optimization, feature engineering, and rigorous evaluation. The approach prioritizes sensitivity (recall) for disease detection, using the three most informative features: carcass weight, dental age, and fat score. All pipeline components—including data preprocessing, imputation, feature ranking, model tuning, and performance assessment—are designed for full reproducibility and operational relevance in abattoir surveillance workflows.
@@ -19,11 +19,16 @@ This repository implements a supervised machine learning pipeline to predict fas
   - Held-out test set evaluation on multiple metrics including AUC-ROC, recall, precision, F1-score, accuracy, and confusion matrix.
 - **Operating point**: Sensitivity-oriented (high recall) threshold to reduce missed infected carcasses at the cost of increased false positives.
 
+## Graphical summary
+![ROC Curve for Fasciolosis Prediction in Uruguayan Bovine Carcasses](roc_fasciolosis_uruguay.PNG)
+
+_Figure_: Receiver Operating Characteristic (ROC) curve of the tuned LightGBM classifier predicting fasciolosis presence in Uruguayan bovine carcasses (test set). The model achieves an AUC-ROC of 0.6519, indicating moderate discriminative ability. 
+
+
 ## Data
-- Source: Publicly available abattoir dataset [[1](https://data.mendeley.com/datasets/3jnn876my4/3)].
-- Sampling frame: Bovine carcass-level observations from one of Uruguay's largest exporters during 2016.
-- Target variable: Fasciolosis presence (`fasciola` binary indicator).
-- Features:  
+- _Source:_ Publicly available abattoir dataset [[1](https://data.mendeley.com/datasets/3jnn876my4/3)].
+- _Target variable:_ Fasciolosis presence (`fasciola` binary indicator).
+- _Features:  _
   | Feature                | Type      | Description                                   |
   |------------------------|-----------|-----------------------------------------------|
   | `carcass_weight`       | Continuous| Post-slaughter carcass weight                  |
@@ -33,7 +38,7 @@ This repository implements a supervised machine learning pipeline to predict fas
   | `productive_purpose`   | Categorical | Production purpose (one-hot encoded, optional) |
   | `month`                | Ordinal   | Derived from slaughter date (1-12)            |
 
-- Preprocessing steps:
+- _Preprocessing steps:_
   - Standardized variable names.
   - Missing values imputed with median (numerical) or mode (categorical).
   - One-hot encoding for categorical variables with unknown category handling.
